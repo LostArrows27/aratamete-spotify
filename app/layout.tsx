@@ -1,4 +1,4 @@
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/leftSideBar/Sidebar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
@@ -6,7 +6,7 @@ import { Figtree } from "next/font/google";
 const figTree = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Spotify",
+  title: "Spotify - Web player: Music for everyone",
   description: "Listen to your favorite music",
 };
 
