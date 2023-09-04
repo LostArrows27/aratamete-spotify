@@ -16,7 +16,7 @@ function Library() {
           <p className="text-md text-neutral-400 font-medium">Your library</p>
         </div>
         <AiOutlinePlus
-          onCLick={openUploadModal}
+          onClick={openUploadModal}
           className="text-neutral-400 hover:text-white transition cursor-pointer"
         />
       </div>
