@@ -164,7 +164,7 @@ function UploadModal() {
             error={errors.image as FieldError}
           />
         </div>
-        <Button type="submit" disabled={isSubmitting} className="mt-3">
+        <Button type="submit" disabled={isSubmitting} className="mt-0">
           Upload{" "}
         </Button>
       </form>
