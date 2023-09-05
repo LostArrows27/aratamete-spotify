@@ -42,3 +42,5 @@ async function Headers({ children, className }: HeadersProp) {
 }
 
 export default Headers;
+
+export const dynamic = "force-dynamic";
