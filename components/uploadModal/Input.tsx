@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 import { forwardRef } from "react";
 import { FieldError } from "react-hook-form";
-
+import { z } from "zod";
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error: FieldError | undefined;
 }
@@ -21,7 +21,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {...props}
         />
         {error && (
-          <p className="text-red-500 inset-0 mt-1 text-sm">{error.message}</p>
+          <p className="inset-0 mt-1 text-sm text-red-500">{error.message}</p>
         )}
       </div>
     );
