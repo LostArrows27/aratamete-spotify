@@ -14,7 +14,7 @@ export default async function Home() {
       <Headers>
         <section className="px-6 py-1 mb-2">
           <h1 className="text-3xl font-semibold text-white">Welcome Back</h1>
-          <div className=" sm-grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 grid grid-cols-1 gap-3 mt-4">
+          <div className="sm-grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 grid grid-cols-1 gap-3 mt-4">
             <ListItem name="Liked Songs" href="/" image="/image/liked.webp" />
           </div>
         </section>
