@@ -8,9 +8,11 @@ import { IconType } from "react-icons/lib/esm/iconBase";
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
 import Library from "./Library";
+import { Song } from "@/types/types";
 
 interface SidebarProps {
   children: ReactNode;
+  songs: Song[];
 }
 
 export type RouteItem = {
@@ -20,7 +22,7 @@ export type RouteItem = {
   icon: IconType;
 };
 
-function Sidebar({ children }: SidebarProps): ReactElement {
+function Sidebar({ children, songs }: SidebarProps): ReactElement {
   const pathName = usePathname();
 
   const routes = useMemo<RouteItem[]>(
@@ -52,7 +54,7 @@ function Sidebar({ children }: SidebarProps): ReactElement {
           </nav>
         </Box>
         <Box className="h-full overflow-y-auto">
-          <Library></Library>
+          <Library songs={songs}></Library>
         </Box>
       </div>
       <main className=" flex-1 h-full py-2 overflow-y-auto">{children}</main>
