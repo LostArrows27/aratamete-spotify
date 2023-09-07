@@ -4,6 +4,7 @@ import useAuthModel from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 import { useSessionContext } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
+import React, { useLayoutEffect } from "react";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
@@ -24,7 +25,7 @@ function LikeButton({ songID }: LikeButtonProps) {
 
   const [isLiked, setIsLiked] = useState<boolean>(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // avoid multiple requests for like
     const checkLiked = async () => {
       const { data, error } = await supabaseClient
