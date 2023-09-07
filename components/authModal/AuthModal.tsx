@@ -11,6 +11,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useEffect } from "react";
 import React from "react";
+import getProductionBaseUrl from "@/actions/getProductionBaseURL";
 
 function AuthModal() {
   const supabaseclient = useSupabaseClient();
@@ -40,7 +41,8 @@ function AuthModal() {
     >
       <Auth
         theme="dark"
-        providers={["github"]}
+        providers={["discord", "google"]}
+        redirectTo={`${getProductionBaseUrl()}/auth/callback`}
         supabaseClient={supabaseclient}
         appearance={{
           theme: ThemeSupa,

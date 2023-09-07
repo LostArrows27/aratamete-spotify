@@ -1,22 +1,20 @@
+"use client";
+
 import { cn } from "@/lib/cn";
-import Button from "./Button";
-import useAuthModel from "@/hooks/useAuthModal";
 import { FaUserAlt } from "react-icons/fa";
 import Navigation from "./Navigation";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import LogoutButton from "./LogoutButton";
 import LoginButton from "./LoginButton";
+import { useUser } from "@supabase/auth-helpers-react";
 
 type HeadersProp = {
   className?: string;
 };
 
-async function Headers({ className }: HeadersProp) {
-  const {
-    data: { user },
-    error,
-  } = await createServerComponentClient({ cookies }).auth.getUser();
+function Headers({ className }: HeadersProp) {
+  const user = useUser();
 
   return (
     <header className={cn("h-fit", className)}>
