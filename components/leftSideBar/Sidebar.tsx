@@ -1,13 +1,9 @@
-"use client";
-
 import { ReactElement, ReactNode } from "react";
 import Box from "./Box";
 import Library from "./Library";
 import Headers from "@/components/headers/Headers";
 import { Song } from "@/types/types";
 import Navigation from "./Navigation";
-import { cn } from "@/lib/cn";
-import usePlayer from "@/hooks/usePlayer";
 
 interface SidebarProps {
   children: ReactNode;
@@ -15,14 +11,8 @@ interface SidebarProps {
 }
 
 function Sidebar({ children, songs }: SidebarProps): ReactElement {
-  const player = usePlayer();
-
   return (
-    <div
-      className={cn("flex h-full", {
-        "h-[calc(100%-80px)]": player.activeID,
-      })}
-    >
+    <div className="flex h-full" id="bodyChange">
       <div className="md:flex gap-y-2 h-full w-[300px] p-2 flex-col hidden bg-black">
         <Navigation />
         <Box className="h-full overflow-y-auto">

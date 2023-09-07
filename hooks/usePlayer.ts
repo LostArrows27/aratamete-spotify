@@ -12,9 +12,19 @@ const usePlayer = createWithEqualityFn<PlayerStore>((set) => {
   return {
     ids: [],
     activeID: undefined,
-    setID: (id: string) => set({ activeID: id }),
+    setID: (id: string) => {
+      const bodyChange = document.getElementById("bodyChange");
+      bodyChange?.classList.remove("h-full");
+      bodyChange?.classList.add("h-[calc(100%-80px)]");
+      set({ activeID: id });
+    },
     setIDs: (ids: string[]) => set({ ids: ids }),
-    reset: () => set({ ids: [], activeID: undefined }),
+    reset: () => {
+      const bodyChange = document.getElementById("bodyChange");
+      bodyChange?.classList.remove("h-[calc(100%-80px)]");
+      bodyChange?.classList.add("h-full");
+      set({ ids: [], activeID: undefined });
+    },
   };
 }, Object.is);
 
