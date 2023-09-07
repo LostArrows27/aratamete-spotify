@@ -9,11 +9,10 @@ import LogoutButton from "./LogoutButton";
 import LoginButton from "./LoginButton";
 
 type HeadersProp = {
-  children: React.ReactNode;
   className?: string;
 };
 
-async function Headers({ children, className }: HeadersProp) {
+async function Headers({ className }: HeadersProp) {
   const {
     data: { user },
     error,
@@ -36,7 +35,6 @@ async function Headers({ children, className }: HeadersProp) {
           )}
         </div>
       </div>
-      {children}
     </header>
   );
 }

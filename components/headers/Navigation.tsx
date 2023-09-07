@@ -34,7 +34,7 @@ function Navigation() {
           <HiHome size={20} className="text-black" />
         </button>
         <button
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/search")}
           className="hover:opacity-75 flex items-center justify-between p-2 transition bg-white rounded-full"
         >
           <BiSearch size={20} className="text-black" />

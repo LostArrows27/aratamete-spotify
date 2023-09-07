@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { RouteItem } from "./Sidebar";
 import { cn } from "@/lib/cn";
+import { RouteItem } from "./Navigation";
 
 function SidebarItem({ icon: Icon, label, active, href }: RouteItem) {
   return (
