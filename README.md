@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/LostArrows27/aratamete-spotify">
-    <img src="https://github.com/LostArrows27/aratamete-spotify/assets/97510841/82eb20f4-5e64-49c5-8917-d1c800b41cd5" alt="Logo" width="160" height="160">
+    <img src="https://github.com/LostArrows27/aratamete-spotify/assets/97510841/82eb20f4-5e64-49c5-8917-d1c800b41cd5" alt="Logo" width="220" height="220">
   </a>
   <h3>Aratamete Spotify</h3>
 <div>A clone version of Spotify</div>
