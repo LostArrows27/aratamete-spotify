@@ -14,9 +14,7 @@ const figTree = Figtree({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Aratamete Spotify: Music for everyone",
   description: "Listen to your favorite music",
-  icons: {
-    icon: "/image/spotify.png",
-  },
+  icons: { icon: "/image/spotify.png" },
 };
 
 export const revalidate = 0;
