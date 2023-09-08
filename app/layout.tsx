@@ -14,7 +14,6 @@ const figTree = Figtree({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Aratamete Spotify: Music for everyone",
   description: "Listen to your favorite music",
-  icons: { icon: "/image/spotify.png" },
 };
 
 export const revalidate = 0;
@@ -28,6 +27,12 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <link
+        rel="icon"
+        type="image/png"
+        href="https://github.com/LostArrows27/aratamete-spotify/assets/97510841/e7bc530c-0bfb-4259-8e3f-e1f7a0257c05"
+        sizes="32*32"
+      />
       <body className={figTree.className}>
         <ToastProvider />
         <SupabaseProvider>
